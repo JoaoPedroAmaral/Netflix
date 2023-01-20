@@ -1,6 +1,9 @@
 :root{
 	--vermelho:#e50914;
 	--preta:#141414;
+  --roxo: #6f1abd;
+  --roxo_claro: #ab66ea;
+  --branco: #eee;
 }
 
 *{
@@ -12,9 +15,24 @@
 /* base */
 
 body{
-	background: var(--preta);
+	background:linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url('../img/background.jpg');
 	font-family: "Arial", Times, serif;
 	color: white;
+}
+
+header{
+  background: #000;
+	font-family: "Arial", Times, serif;
+	color: white;
+}
+
+.icon{
+  width: 40px;
+}
+
+.anibest{
+  display:flex;
+  align-items: center;
 }
 
 header .container{
@@ -25,7 +43,8 @@ header .container{
 }
 
 .logo{
-	color: var(--vermelho);
+	color: var(--branco);
+  text-shadow: 4px 2px var(--roxo);
 	font-family: "Arial Black", Times;
 	font-size:40px;
 	margin-left: 5px;
@@ -39,7 +58,8 @@ header .container{
 
 header nav a{
 	text-decoration: none;
-	color:#AAA;
+	color:#BBB;
+   text-shadow: 1px 1px var(--roxo_claro);
 	margin-right: 10px;
 	font-size:20px;
 }
@@ -52,7 +72,7 @@ header nav a:hover{
 
 .filme-principal{
 	font-size:16px;
-	background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url('../img/capa.jpg');
+	background: linear-gradient(rgba(0,0,0,.30), rgba(0,0,0,.30)100%), url('../img/Capa.png');
 	height:600px;
 	background-size:cover;
 	display: flex;
@@ -101,6 +121,13 @@ header nav a:hover{
 .filme-principal .container{
 	width: 60%;
 }
+
+h3{
+  color: white;
+  text-shadow: 1px 1px var(--roxo_claro);
+  
+}
+
 
 .box_filme{
   margin-top:20px;
