@@ -94,20 +94,89 @@ header nav a:hover{
 	font-family:"Arial Black", Times;
 }
 
+.botoes{
+	display: flex;
+}
+
 .botao{
 	background-color: rgba(0,0,0,.50);
 	border:none;
 	color:white;
-	padding:15px 30px;
-	margin-right: 15px;
+	padding:15px 20px;
+	margin: 10px;
 	font-size: 12px;
 	cursor:pointer;
+	text-decoration: none;
 	transition: .3s ease all;
 }
 
 .botao:hover{
 	background-color:white;
 	color:black;
+}
+/*modal*/
+.modalA:target{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalA h3, .modalA h4{
+    margin-top: 20px;
+    margin-left: 20px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.modalA li, .modalA p{
+    margin-left: 20px;
+}
+
+.modalA button#fechar{
+    align-items: center;
+    width: 25px;
+	height: 25px;
+    margin-top: 7px;
+    margin-left: 7px;
+	background-color: #aaa;
+    border: 2px solid #aaa;
+	border-radius: 100%;
+}
+
+.modalA button#fechar:hover{
+    align-items: center;
+    width: 25px;
+	height: 25px;
+	font-weight: bold;
+    margin-top: 7px;
+    margin-left: 7px;
+    border: 2px solid #555;
+}
+
+.modalA > div {
+    width: 100%;
+    position: relative;
+    padding: 15px 20px;
+}
+
+/*modal*/
+.modalA{
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    /*background-color: rgba(255, 177, 82, 1);*/
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url('../img/love.gif');
+	background-size: 100%;
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+    border: 3px solid #000;
+    overflow: auto;
+	
 }
 
 .botao i{
